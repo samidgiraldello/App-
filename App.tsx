@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, Text, Image } from 'react-native'
+import { View, StyleSheet, Text, Image, TouchableOpacity, Alert } from 'react-native'
 import logo from "./assets/logo.png"
 import Toggle from './Toggle'
 
@@ -39,6 +39,11 @@ export default function App() {
         }}
       />
       <Text>Olá, você deseja fazer um pedido</Text>
+      <TouchableOpacity onPress={() => {
+        Alert.alert('Clicou!')
+      }}>
+        <Image source={logo} style={styles.img} />
+      </TouchableOpacity>
       <Image source={logo} style={styles.img} />
       <View style={[styles.layout, layoutStyle]}>
         <View style={styles.box} />
